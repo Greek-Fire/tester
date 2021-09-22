@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: test
+      ansible.posix.firewalld:
+        service: https
+        permanent: true
+        state: enabled
+        permanent: true
