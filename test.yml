@@ -1,6 +1,5 @@
 ---
 - hosts: localhost
-  connection: local
   tasks:
     - name: test
       ansible.posix.firewalld:
