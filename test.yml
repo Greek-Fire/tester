@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: all
   tasks:
     - name: test
       ansible.posix.firewalld:
@@ -7,3 +7,4 @@
         permanent: true
         state: enabled
         permanent: true
+      when: ansible_hostname != 'awx'
